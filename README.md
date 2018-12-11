@@ -30,6 +30,11 @@ Or [download](https://github.com/W4G1/ionic-vue-starter/archive/master.zip) dire
 npm install
 ```
 
+### Building the web assets for production
+```sh
+npm run build
+```
+
 ### Adding a platform for development
 {platform} can be 'android', 'electron', 'ios', or 'web'.
 ```sh
@@ -42,7 +47,7 @@ npm run init {platform}
 | `npm run serve` | Starts development server with hot reloading |
 | `npm run build` | Builds the web files and stores them in /dist |
 | `npm run init {platform}` | Adds a new platform in the project in a folder called /{platform} |
-| `npm run transfer {platform}` | Copies the /dist files to the platform folder |
+| `npm run transfer {platform}` | Copies the contents of /dist to the platform folder |
 | `npm run compile {platform}` | Builds, transfers and opens the native platform workspace |
 
 ## :package: Compiling
@@ -50,11 +55,11 @@ npm run init {platform}
 #### Requirements
 - [Android Studio](https://developer.android.com/studio/).
 #### Guide
-1. Build the web files for production
+1. Build the web assets for production
 ```sh
 npm run build
 ```
-2. Copy the builded web files to the android folder
+2. Copy the builded web assets to the android folder
 ```sh
 npm run transfer android
 ```
@@ -72,3 +77,6 @@ take a look [here](https://developer.android.com/studio/run/).
 - [Xcode](https://developer.apple.com/xcode/) (OS X only).
 #### Guide
 Coming soon!
+
+## Bugs & Questions
+For any bugs or questions, feel free to create an issue [here](https://github.com/W4G1/ionic-vue-starter/issues).
