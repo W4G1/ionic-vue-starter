@@ -1,0 +1,25 @@
+{
+  "name": "ionic-vue-starter",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "init": "npx cap add",
+    "transfer": "npx cap copy",
+    "compile": "vue-cli-service build && npx cap copy && npx cap open"
+  },
+  "dependencies": {
+    "@capacitor/cli": "1.0.0-beta.11",
+    "@capacitor/core": "1.0.0-beta.11",
+    "@ionic/core": "^4.0.0-beta.17",
+    "@ionic/vue": "0.0.1",
+    "vue": "^2.5.17",
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
+  },
+  "devDependencies": {
+    "@vue/cli-service": "^3.0.5",
+    "vue-template-compiler": "^2.5.17"
+  }
+}
