@@ -2,5 +2,7 @@
   "appId": "io.ionic.starter",
   "appName": "ionic-vue-starter",
   "bundledWebRuntime": false,
-  "webDir": "dist"
+  "webDir": "dist",
+  "windowsAndroidStudioPath": "C:\\Program Files\\Android\\Android Studio\\bin\\studio64.exe",
+  "linuxAndroidStudioPath": "/usr/local/android-studio/bin/studio.sh"
 }
