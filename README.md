@@ -30,47 +30,55 @@ Or [download](https://github.com/W4G1/ionic-vue-starter/archive/master.zip) dire
 npm install
 ```
 
-### Building the web assets for production
-```sh
-npm run build
-```
-
 ### Adding a platform for development
 {platform} can be 'android', 'electron', 'ios', or 'web'.
 ```sh
 npm run init {platform}
 ```
 
+### Running the development server
+This is the Vue dev server, and features hot reloading.
+```sh
+npm run serve
+```
+
 ## :fire: Commands
 | Command | Description |
 | ------ | ------ |
-| `npm run serve` | Starts development server with hot reloading |
-| `npm run build` | Builds the web files and stores them in /dist |
-| `npm run init {platform}` | Adds a new platform in the project in a folder called /{platform} |
-| `npm run transfer {platform}` | Copies the contents of /dist to the platform folder |
-| `npm run compile {platform}` | Builds, transfers and opens the native platform workspace |
+| `npm run serve` | Starts development server with hot reloading. |
+| `npm run build {platform}` | Builds the project and opens the native platform workspace. |
+| `npm run init {platform}` | Adds a new platform to the project with its own folder (e.g /android or /ios). |
+| `npm run sync {platform}` | Synchronizes the web assets with a specific project folder, or all initialized platforms if {platform} is left empty. |
 
-## :package: Compiling
+## :package: Building
 ### Android
 #### Requirements
 - [Android Studio](https://developer.android.com/studio/).
 #### Guide
-1. Build the web assets for production
+Run this command to sync the web assets with the android project folder, and open the project in Android Studio.
 ```sh
-npm run build
+npm run build android
 ```
-2. Copy the builded web assets to the android folder
-```sh
-npm run transfer android
-```
-3. Load the project in Android Studio
-```sh
-npm run compile android
-```
-Android Studio should be automatically started and is now ready to build the project.
+Android Studio should now be started. If not, you either didn't install it, or it is installed at a custom location.
 
-If you don't know how to build the project in Android Studio,
-take a look [here](https://developer.android.com/studio/run/).
+If that is the case, you can specify the Android Studio path in `capacitor.config.json`.
+
+For Windows:
+```json
+{
+    ...
+    "windowsAndroidStudioPath": "C:\\Program Files\\Android\\Android Studio\\bin\\studio64.exe",
+}
+```
+Or Linux:
+```json
+{
+    ...
+    "linuxAndroidStudioPath": "/usr/local/android-studio/bin/studio.sh"
+}
+```
+
+The project should now be loaded in Android Studio, and is ready for building. If you don't know how to build a project in Android Studio, take a look [here](https://developer.android.com/studio/run/).
 
 ### IOS
 #### Requirements
