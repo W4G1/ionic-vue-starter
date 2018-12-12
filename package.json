@@ -3,23 +3,28 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "init": "npx cap add",
-    "transfer": "npx cap copy",
-    "compile": "vue-cli-service build && npx cap copy && npx cap open"
+    "serve": "npx vue-cli-service serve",
+    "sync": "npx capacitor copy",
+    "presync": "npx vue-cli-service build",
+    "postsync": "rm -rf dist",
+    "build": "npx capacitor open",
+    "prebuild": "npx vue-cli-service build && npx capacitor copy && rm -rf dist",
+    "init": "npx capacitor add",
+    "preinit": "npx vue-cli-service build",
+    "postinit": "rm -rf dist"
   },
   "dependencies": {
-    "@capacitor/cli": "1.0.0-beta.11",
     "@capacitor/core": "1.0.0-beta.11",
     "@ionic/core": "^4.0.0-beta.17",
     "@ionic/vue": "0.0.1",
-    "vue": "^2.5.17",
+    "ionic": "^4.5.0",
+    "vue": "^2.5.21",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
+    "@capacitor/cli": "1.0.0-beta.11",
     "@vue/cli-service": "^3.0.5",
-    "vue-template-compiler": "^2.5.17"
+    "vue-template-compiler": "^2.5.21"
   }
 }
